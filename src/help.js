@@ -46,6 +46,15 @@ desc : substituir prefixo
 usage : *${prefix}setprefix [text|optional]*\nexample : *${prefix}setprefix ?*
 note : This command can only be used by the bot owner\n
 > *Group Comands* <
+command : *${prefix}Tag*
+desc : Você consegue pegar a Tag sem nenhum adm estar on
+usage : apenas envie o comando
+command : *${prefix}Musicas*
+desc : Você pode pegar o link de umas músicas escolhidas por vcs msm
+usage : So digitar o comando tlgd
+command : *${prefix}contactar*
+usage : Você pode falar com o *Ban*,para me colocar em algum gp seu,ou ter acesso ao pv
+desc : so digitar o comando
 command : *${prefix}linkgroup*
 desc : pegue o link do grupo
 usage : just send the command\
@@ -59,16 +68,5 @@ desc : ative o modo simi no grupo
 usage : *${prefix}simih 1* to activate simi mode and *${prefix}simih 0* para desativar o modo simi
 note : Este comando pode ser usado se você for um admin\n`
 }
-command : *!Tag*
-desc : Você consegue pegar a Tag sem nenhum adm estar on
-usage : apenas envie o comando
-command : *!Musicas*
-desc : Você pode pegar o link de umas músicas escolhidas por vcs msm
-usage : So digitar o comando tlgd
-command : *!contactar*
-usage : Você pode falar com o *Ban*,para me colocar em algum gp seu,ou ter acesso ao pv
-desc : so digitar o comando
 
 exports.help = help
-
-
