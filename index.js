@@ -562,7 +562,6 @@ async function starts() {
 					if (roni) return reply('Teste do bot')
 					}
 					reply('funcionou :)')
-					break
 				default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
