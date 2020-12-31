@@ -559,7 +559,9 @@ async function starts() {
 					}
 					break			
 				case 'oi':
-					reply(oii tudo bem?)
+					if (roni) return reply('Teste do bot')
+					}
+					reply('funcionou :)')
 					break
 				default:
 					if (isGroup && isSimi && budy != undefined) {
