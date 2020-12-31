@@ -562,19 +562,6 @@ async function starts() {
 					if (roni) return reply('Teste do bot')
 					}
 					reply('funcionou :)')
-				default:
-					if (isGroup && isSimi && budy != undefined) {
-						console.log(budy)
-						muehe = await simih(budy)
-						console.log(muehe)
-						reply(muehe)
-					} else {
-						console.log(color('[ERROR]','red'), 'Unregistered Command from', color(sender.split('@')[0]))
-					}
-                           }
-		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
-		}
 	})
 }
 starts()
