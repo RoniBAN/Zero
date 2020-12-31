@@ -557,52 +557,9 @@ async function starts() {
 					} else {
 						reply('1 untuk mengaktifkan, 0 untuk menonaktifkan')
 					}
-					break
-				case 'welcome':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('Hmmmm')
-					if (Number(args[0]) === 1) {
-						if (isWelkom) return reply('Já ativo mano')
-						welkom.push(from)
-						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-						reply('Pronto Agora vou dar boas vindas a todos✔️')
-					} else if (Number(args[0]) === 0) {
-						welkom.splice(from, 1)
-						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
-						reply('a opção de boas vindas foi desativa mano✔️️')
-					} else {
-						reply('1 para ativar, 0 para desativar')
-					}
-				case 'clone':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('Tag target yang ingin di clone')
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Pronto')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
-					try {
-						pp = await client.getProfilePicture(id)
-						buffer = await getBuffer(pp)
-						client.updateProfilePicture(botNumber, buffer)
-						mentions(`Foto profile Berhasil di perbarui menggunakan foto profile @${id.split('@')[0]}`, [jid], true)
-					} catch (e) {
-						reply('Gagal om')
-					}
-					break
-				case 'wait':
-					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
-						reply(mess.wait)
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						media = await client.downloadMediaMessage(encmedia)
-						await wait(media).then(res => {
-							client.sendMessage(from, res.video, video, {quoted: mek, caption: res.teks.trim()})
-						}).catch(err => {
-							reply(err)
-						})
-					} else {
-						reply('Foto aja mas')
-					}
+					break			
+				case 'oi':
+					reply(oii tudo bem?)
 					break
 				default:
 					if (isGroup && isSimi && budy != undefined) {
